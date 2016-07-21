@@ -1,2 +1,13 @@
-No posts yet
-<a href='#'>Add a blog post</a>
+<% if @posts.all.any? %>
+  <% @posts.all.each do |post| %>
+    <h2><%= link_to post.title, post_path(post) %></h2>
+    <h3><%= post.body %></h3>
+    <%= link_to "Edit #{post.title}", edit_post_path(post) %>
+  <% end %>
+<% else %>
+  <h1>No posts yet</h1>
+<% end %>
+
+<%= link_to "Add a blog post", new_post_url %>
+
+
