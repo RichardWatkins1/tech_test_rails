@@ -9,3 +9,15 @@ feature 'posts' do
     end
   end
 end
+
+context 'posts have been added' do
+  before do
+    Post.create(title: 'My first blog post')
+  end
+
+  scenario 'display posts' do
+    visit '/posts'
+    expect(page).to have_content('My first blog post')
+    expect(page).not_to have_content('No posts yet')
+  end
+end
