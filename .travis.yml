@@ -1,4 +1,4 @@
-.travis.ymlrvm: '2.2.0'
+.travis.ymlrvm: '2.3.0'
 script: bundle exec rspec spec
 script:
  - bundle exec bin/rake db:create
