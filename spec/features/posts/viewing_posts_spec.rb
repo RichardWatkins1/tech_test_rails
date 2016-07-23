@@ -1,11 +1,8 @@
 require 'rails_helper'
 
 feature 'posts' do
-
-  context 'viewing postss' do
-
+  context 'viewing posts' do
     let!(:first_post){ Post.create(title:'My first blog post') }
-
     scenario 'lets a user view a post' do
       visit '/posts'
       click_link 'My first blog post'

@@ -17,6 +17,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -589,6 +590,13 @@
         1,
         null
       ],
+      "/Users/rachelboakes/Desktop/tech_test_rails/blog/spec/web_helper.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
       "/Users/rachelboakes/Desktop/tech_test_rails/blog/app/helpers/application_helper.rb": [
         1,
         null
@@ -601,7 +609,7 @@
         1,
         null,
         1,
-        6,
+        5,
         null,
         null,
         1,
@@ -660,14 +668,6 @@
         1,
         1,
         1,
-        0,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -704,11 +704,8 @@
         1,
         null,
         1,
-        null,
         1,
-        null,
         2,
-        null,
         1,
         1,
         1,
@@ -757,6 +754,6 @@
         null
       ]
     },
-    "timestamp": 1469283650
+    "timestamp": 1469288078
   }
 }

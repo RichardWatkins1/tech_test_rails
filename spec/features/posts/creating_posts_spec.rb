@@ -10,18 +10,10 @@ feature 'creating posts' do
   end
 end
 
-context 'posts have been added' do
-  before do
-    Post.create(title: 'My first blog post')
-  end
-  scenario 'display posts' do
-    visit '/posts'
-    expect(page).to have_content('My first blog post')
-    expect(page).not_to have_content('No posts yet')
-  end
-end
-
 context 'creating posts' do
+  after do
+    remove_uploaded_file
+  end
   scenario 'prompts user to fill out a form, then displays the new post' do
     visit '/posts'
     click_link 'new post'
