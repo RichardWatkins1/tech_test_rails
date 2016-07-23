@@ -1,7 +1,6 @@
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :body %>
-  <%= f.text_field :body %>
-  <%= f.submit %>
+<%= simple_form_for @post, html: { multipart: true } do |f| %>
+  <%= f.input :image %>
+  <%= f.input :title %>
+  <%= f.input :body %>
+  <%= f.button :submit %>
 <% end %>

@@ -15,14 +15,9 @@ context 'creating posts' do
     remove_uploaded_file
   end
   scenario 'prompts user to fill out a form, then displays the new post' do
-    visit '/posts'
-    click_link 'new post'
-    attach_file('Image', "spec/files/images/blog.jpg")
-    fill_in 'Title', with: 'My first blog post'
-    fill_in 'Body', with: 'My first blog post is rather sort although it will take much longer text'
-    click_button 'Create Post'
+    create_post
     expect(page).to have_content 'My first blog post'
     expect(current_path).to eq '/posts'
-     expect(page).to have_css("img[src*='blog.jpg']")
+    expect(page).to have_css("img[src*='blog.jpg']")
   end
 end
