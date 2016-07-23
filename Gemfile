@@ -23,7 +23,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'simple_form'
-gem 'aws-sdk'
+gem 'aws-sdk', '>= 2.0.34'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

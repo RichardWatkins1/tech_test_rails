@@ -1,6 +1,7 @@
 <%= simple_form_for @post, html: { multipart: true } do |f| %>
   <%= f.input :image %>
-  <%= f.input :title %>
-  <%= f.input :body %>
+  <%= f.input :title, :input_html => {:placeholder => "Write your blog title here", :class => "span6", :data => {:provide => "markdown"} }%>%>
+  <%= f.input :body, :input_html => {:rows => 20, :placeholder => "Write your blog here", :class => "span6", :data => {:provide => "markdown"} }%>
   <%= f.button :submit %>
 <% end %>
+
