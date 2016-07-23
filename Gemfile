@@ -5,6 +5,7 @@ gem 'rack', '~> 2.0', '>= 2.0.1'
 gem 'rails', '~> 5.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
+gem 'bootstrap-sass', '~> 3.3.6'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -21,6 +22,9 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'simple_form'
+gem 'aws-sdk', '>= 2.0.34'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -37,8 +41,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec-rails'
-  gem 'capybara'
   gem 'rspec-collection_matchers'
   gem 'webmock'
   gem 'factory_girl_rails'
