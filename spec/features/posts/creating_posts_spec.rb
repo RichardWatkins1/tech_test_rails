@@ -17,6 +17,8 @@ context 'creating posts' do
   scenario 'prompts user to fill out a form, then displays the new post' do
     create_post
     expect(page).to have_content 'My first blog post'
+    expect(page).to have_content "Your post has been created!"
+    expect(page).not_to have_content("Your new post couldn't be created!  Please check the form.")
     expect(current_path).to eq '/posts'
     expect(page).to have_css("img[src*='blog.jpg']")
   end
