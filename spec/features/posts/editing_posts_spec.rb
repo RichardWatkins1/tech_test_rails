@@ -12,6 +12,7 @@ feature 'posts' do
       expect(page).to have_content 'My first blog post edited'
       expect(page).to have_content 'My first blog post body edited'
       expect(page).to have_content "Post updated."
+      expect(page).not_to have_content("Update failed.  Please check the form.")
       expect(page).to have_css("img[src*='blog.jpg']")
       expect(current_path).to eq '/posts'
     end
