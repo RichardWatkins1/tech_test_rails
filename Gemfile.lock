@@ -59,6 +59,7 @@ GEM
       jmespath (~> 1.0)
     aws-sdk-resources (2.4.0)
       aws-sdk-core (= 2.4.0)
+    bcrypt (3.1.11)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -92,6 +93,12 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     debug_inspector (0.0.2)
+    devise (4.2.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
@@ -135,6 +142,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     pkg-config (1.1.7)
     puma (3.5.0)
@@ -169,6 +177,8 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
+    responders (2.2.0)
+      railties (>= 4.2.0, < 5.1)
     rspec-collection_matchers (1.1.2)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.5.1)
@@ -231,6 +241,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (3.3.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -256,6 +268,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   coveralls
+  devise
   factory_girl_rails
   jbuilder (~> 2.5)
   jquery-rails
