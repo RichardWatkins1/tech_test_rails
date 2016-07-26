@@ -33,6 +33,7 @@ def sign_in
   click_button 'Sign up'
 end
 
+
 def sign_in_wrong_email
   visit '/'
   click_link 'Register'

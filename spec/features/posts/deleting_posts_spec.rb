@@ -2,6 +2,9 @@ require 'rails_helper'
 
 feature 'posts' do
   context 'editing posts' do
+    after do
+      remove_uploaded_file
+    end
     scenario 'delete a post' do
       sign_in_and_create_post
       click_link 'My first blog post'

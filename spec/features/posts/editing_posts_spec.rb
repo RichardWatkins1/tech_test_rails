@@ -2,6 +2,9 @@ require 'rails_helper'
 
 feature 'editing posts' do
   context 'editing posts' do
+    after do
+      remove_uploaded_file
+    end
     scenario 'let a user edit a post that they have created' do
       sign_in_and_create_post
       click_link 'My first blog post'
@@ -20,6 +23,9 @@ feature 'editing posts' do
   end
 
   context 'editing posts' do
+    after do
+      remove_uploaded_file
+    end
     scenario "a user can't edit a post they didn't create" do
       sign_in_and_create_post
       click_link 'Logout'

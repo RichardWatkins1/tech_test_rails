@@ -18,5 +18,4 @@ feature 'signing in' do
       expect(current_path).to eq '/users'
     end
   end
-
 end
