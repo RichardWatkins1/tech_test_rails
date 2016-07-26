@@ -17,17 +17,11 @@
         <% end %>
       </div>
       <% end %>
-      <div class="comment-form col-sm-11">
-        <%= form_for [@post, @post.comments.new], remote: true do |f| %>
-        <%= f.text_field :content, placeholder: 'Add a comment...' %>
-          <%= f.submit %>
-        <% end %>
-      </div>
     </div>
   </div></div>
-  <% if @post.user.id == current_user.id %>
+      <% if @post.user.id == current_user.id %>
   <div class="text-center edit-links">
-    <%= link_to "Edit #{@post.title}", edit_post_path(@post) %>
+    <%= link_to "Edit blog post", edit_post_path(@post) %>
     |
     <%= link_to "cancel", posts_path %>
     <% else %>
@@ -35,4 +29,5 @@
       <%= link_to "cancel", posts_path %>
       <%end%>
     </div>
+  </div>
   </body>

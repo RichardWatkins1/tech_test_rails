@@ -3,9 +3,9 @@ require 'rails_helper'
 feature 'posts' do
   context 'viewing posts' do
     scenario 'lets a user view a post' do
-      sign_in_and_create_post
-      click_link 'My first blog post'
-      expect(page).to have_content 'My first blog post'
+      sign_in
+      click_link 'Logout'
+      expect(page).to have_content 'Signed out successfully.'
     end
   end
 end
