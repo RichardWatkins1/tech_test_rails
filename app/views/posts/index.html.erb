@@ -3,9 +3,6 @@
   <% @posts.all.each do |post| %>
   <div class="post">
     <div class="post-head">
-        <div class="name">
-           Richard Watkins
-        </div>
       </div>
     <h2><%= link_to post.title, post_path(post) %></h2>
     <div class="image center-block">
