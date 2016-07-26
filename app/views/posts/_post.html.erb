@@ -1,0 +1,33 @@
+<div class="posts-wrapper row">
+  <body>
+    <h1><%= @post.title %></h1>
+    <div class="image center-block">
+      <%= image_tag @post.image.url(:medium) %>
+    </div>
+    <p class="body">
+      <h3><%= markdown(@post.body) %></h3>
+    </p>
+    <div class="post-bottom">
+      <% if @post.comments %>
+      <% @post.comments.each do |comment| %>
+      <div class="comment">
+        <div class="comment-content">
+          <%= comment.content %>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div></div>
+      <% if @post.user.id == current_user.id %>
+  <div class="text-center edit-links">
+    <%= link_to "Edit blog post", edit_post_path(@post) %>
+    |
+    <%= link_to "cancel", posts_path %>
+    <% else %>
+    <div class="text-center edit-links">
+      <%= link_to "cancel", posts_path %>
+      <%end%>
+    </div>
+  </div>
+  </body>

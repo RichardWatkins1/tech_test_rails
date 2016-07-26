@@ -16,26 +16,26 @@
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-brand">
-        <%= link_to "My blog", posts_path %>
+        <%= link_to "Blogs", posts_path %>
       </div>
     </div>
     <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
         <li>
           <%= link_to "new blog post".html_safe, new_post_path, :title => "new post", :id => 'create-a-new-post' %>
         </li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+          <li><%= link_to "Login", new_user_session_path %></li>
         <li>
-          <%= link_to "Login", '#' %>
+          <li><%= link_to "Register", new_user_registration_path %></li>
         </li>
-        <li>
-          <%= link_to "Register", '#' %>
-        </li>
+        <% end %>
       </ul>
     </div>
   </div>
 </nav>
- <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
 <div class="page-container">
     <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>

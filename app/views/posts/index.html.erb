@@ -1,26 +1,39 @@
 <div class="posts-wrapper row">
-<% if @posts.all.any? %>
+  <% if @posts.all.any? %>
   <% @posts.all.each do |post| %>
   <div class="post">
     <div class="post-head">
-        <div class="name">
-           Richard Watkins
-        </div>
-      </div>
+      Author of this blog is <%= post.user.user_name %>
+    </div>
     <h2><%= link_to post.title, post_path(post) %></h2>
     <div class="image center-block">
-        <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+      <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+    </div>
+    <p class="body">
+      <h3><%= markdown(post.body) %></h3>
+    </p>
+    <div class="comment-form col-sm-11">
+      <%= form_for [post, post.comments.new], remote: true do |f| %>
+      <%= f.text_field :content, placeholder: 'Add a comment...' %>
+      <%= f.submit %>
+      <% end %>
+      <div class="post-bottom">
+        <% if post.comments %>
+        <% post.comments.each do |comment| %>
+        <div class="comment">
+          <div class="comment-content">
+            <%= comment.content %>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
       </div>
-      <p class="body">
-    <h3><%= markdown(post.body) %></h3>
-  </p>
-    <%= link_to "Edit #{post.title}", edit_post_path(post) %>
-  <% end %>
-<% else %>
-  <h1>No posts yet</h1>
+      <% end %>
+      <% else %>
+      <h1>No posts yet</h1>
+    </div>
+    <% end %>
   </div>
-<% end %>
-</div>
 
 
 
