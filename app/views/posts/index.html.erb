@@ -12,7 +12,6 @@
       <p class="body">
     <h3><%= markdown(post.body) %></h3>
   </p>
-    <%= link_to "Edit #{post.title}", edit_post_path(post) %>
   <% end %>
 <% else %>
   <h1>No posts yet</h1>

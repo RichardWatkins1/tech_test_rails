@@ -8,4 +8,17 @@
   <p class="body">
     <h3><%= markdown(@post.body) %></h3>
   </p>
+  <% if @post.user.id == current_user.id %>
+  <div class="text-center edit-links">
+  <%= link_to "Edit #{@post.title}", edit_post_path(@post) %>
+  |
+  <%= link_to "cancel", posts_path %>
+  <% else %>
+  <div class="text-center edit-links">
+    <%= link_to "cancel", posts_path %>
+  <%end%>
+</div>
+</div>
+</div>
+
 </body>
