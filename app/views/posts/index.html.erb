@@ -12,7 +12,7 @@
         <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
       </div>
       <p class="body">
-    <h3><%= post.body %></h3>
+    <h3><%= markdown(post.body) %></h3>
   </p>
     <%= link_to "Edit #{post.title}", edit_post_path(post) %>
   <% end %>
