@@ -1,5 +1,9 @@
 # README
 
+[![Build Status](https://travis-ci.org/RichardWatkins1/tech_test_rails.svg?branch=master )](https://travis-ci.org/RichardWatkins1/tech_test_rails)
+
+[![Coverage Status](https://coveralls.io/repos/github/RichardWatkins1/tech_test_rails/badge.svg?branch=master)](https://coveralls.io/github/RichardWatkins1/tech_test_rails?branch=master)
+
 Tech test Rails
 ---------------
 
