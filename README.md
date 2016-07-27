@@ -22,7 +22,8 @@ Tech test Rails
 
 - once installation is complete run rspec. A feature test example can be found below:
 
-```feature 'creating posts' do
+```
+feature 'creating posts' do
   context 'no posts have been added' do
     scenario 'should display links to login and register as new visitor' do
       visit '/posts'
