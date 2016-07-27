@@ -20,7 +20,9 @@ Tech test Rails
 
 ## Testing
 
-- once installation is complete run rspec. A feature test example can be found below:
+- once installation is complete run rspec.
+
+A feature test example can be found below:
 
 ```
 feature 'creating posts' do
