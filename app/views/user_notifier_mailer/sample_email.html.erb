@@ -7,6 +7,7 @@
     <h1>Hi <%= @user.user_name %></h1>
     <p>
       There's a new blog waiting to be read!
+      <%= link_to "view it now!",  posts_url %>
     </p>
     <p>
       <%= link_to "Unsubscribe?",  unsubscribe_user_url(@user) %>
