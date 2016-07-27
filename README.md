@@ -10,7 +10,7 @@ Tech test Rails
 - run bin/rails db:migrate to set up migrations in development environment
 - run bin/rails db:migrate RAILS_ENV=test to set up migrations in test environment
 - run bin/rails s to start the server
-- vist http://localhost:3000/ to view website
+- visit http://localhost:3000/ to view website
 
 ## Testing
 
