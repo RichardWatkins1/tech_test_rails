@@ -1,6 +1,7 @@
 # README
 
 Tech test Rails
+---------------
 
 ## Installation
 
