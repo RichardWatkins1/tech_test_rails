@@ -7,5 +7,9 @@ resources :posts do
   resources :comments
 end
 
+resources :user do
+  get :unsubscribe, on: :member
+end
+
 
 end

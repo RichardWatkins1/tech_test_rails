@@ -92,7 +92,6 @@
         null,
         null,
         null,
-        null,
         1,
         null,
         1,
@@ -129,13 +128,12 @@
         null,
         null,
         null,
-        null,
         1,
         1,
         null,
         null,
         1,
-        null,
+        1,
         null,
         1,
         1,
@@ -870,6 +868,10 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
         null,
         null
       ],
@@ -890,14 +892,6 @@
       ],
       "/Users/rachelboakes/Desktop/tech_test_rails/blog/spec/web_helper.rb": [
         1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
         null,
         1,
         5,
@@ -962,6 +956,10 @@
         null
       ],
       "/Users/rachelboakes/Desktop/tech_test_rails/blog/app/helpers/posts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/rachelboakes/Desktop/tech_test_rails/blog/app/helpers/user_helper.rb": [
         1,
         null
       ],
@@ -1030,6 +1028,10 @@
         5,
         5,
         5,
+        5,
+        5,
+        null,
+        5,
         null,
         0,
         0,
@@ -1075,6 +1077,25 @@
         0,
         0,
         null,
+        null,
+        null,
+        null
+      ],
+      "/Users/rachelboakes/Desktop/tech_test_rails/blog/spec/controllers/user_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/rachelboakes/Desktop/tech_test_rails/blog/app/controllers/user_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -1217,7 +1238,6 @@
         1,
         null,
         null,
-        null,
         null
       ],
       "/Users/rachelboakes/Desktop/tech_test_rails/blog/spec/helpers/comments_helper_spec.rb": [
@@ -1250,6 +1270,50 @@
         null,
         null,
         null,
+        1,
+        1,
+        null
+      ],
+      "/Users/rachelboakes/Desktop/tech_test_rails/blog/spec/helpers/user_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/rachelboakes/Desktop/tech_test_rails/blog/spec/mailers/user_notifier_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/rachelboakes/Desktop/tech_test_rails/blog/app/mailers/user_notifier_mailer.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        5,
+        5,
+        5,
+        5,
+        null,
+        null,
+        null
+      ],
+      "/Users/rachelboakes/Desktop/tech_test_rails/blog/app/mailers/application_mailer.rb": [
+        1,
         1,
         1,
         null
@@ -1308,6 +1372,6 @@
         null
       ]
     },
-    "timestamp": 1469566239
+    "timestamp": 1469626956
   }
 }
