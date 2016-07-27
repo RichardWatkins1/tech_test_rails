@@ -12,9 +12,11 @@ class PostsController < ApplicationController
   end
 
   def create
+    @user = User.first
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Your post has been created!"
+      UserNotifierMailer.sample_email(@user).deliver
       redirect_to posts_path
     else
       flash[:alert] = "Your new post couldn't be created!  Please check the form."
