@@ -20,6 +20,16 @@ Tech test Rails
 
 ## Testing
 
-- once installation is complete run rspec
+- once installation is complete run rspec. A feature test example can be found below:
 
-
+```feature 'creating posts' do
+  context 'no posts have been added' do
+    scenario 'should display links to login and register as new visitor' do
+      visit '/posts'
+      expect(page).to have_content 'No posts yet'
+      expect(page).to have_link 'Register'
+      expect(page).to have_link 'Login'
+    end
+  end
+end
+```
