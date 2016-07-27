@@ -10,7 +10,6 @@ feature 'creating posts' do
     end
   end
 
-
   context 'creating posts' do
     after do
       remove_uploaded_file
@@ -24,7 +23,6 @@ feature 'creating posts' do
       expect(page).to have_css("img[src*='blog.jpg']")
     end
   end
-
 
   context 'creating posts' do
     after do
