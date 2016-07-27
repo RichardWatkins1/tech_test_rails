@@ -1,15 +1,10 @@
 class UserController < ApplicationController
 
-  def create
-    # Create the user from params
-    @user = User.new(params[:user])
-    if @user.save
-      # Deliver the signup email
-      UserNotifier.send_signup_email(@user).deliver
-      redirect_to(@user, :notice => 'User created')
-    else
-      render :action => 'new'
-    end
+  def unsubscribe
+    user = User.find params[:id]
+    user.update_attributes(subscribed: false)
+    flash[:success] = "You successfully unsubscribed"
+    redirect_to posts_path
   end
 
 end
