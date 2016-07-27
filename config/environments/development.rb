@@ -13,7 +13,7 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "your_gmail_username",
-    password: "your_gmail_password"
+    password: "Your_gmail_password"
   }
 
   config.paperclip_defaults = {

@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     if @post.save
       flash[:success] = "Your post has been created!"
       @user.each do |user|
-        UserNotifierMailer.sample_email(user).deliver
+        UserNotifierMailer.sample_email(user, @post).deliver
       end
       redirect_to posts_path
     else
