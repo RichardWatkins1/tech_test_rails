@@ -19,7 +19,7 @@
       <% end %>
     </div>
   </div></div>
-      <% if @post.user.id == current_user.id %>
+  <% if @post.user.id == current_user.id %>
   <div class="text-center edit-links">
     <%= link_to "Edit blog post", edit_post_path(@post) %>
     |
@@ -30,4 +30,4 @@
       <%end%>
     </div>
   </div>
-  </body>
+</body>

@@ -17,8 +17,8 @@ class PostsController < ApplicationController
     if @post.save
       flash[:success] = "Your post has been created!"
       @user.each do |user|
-      UserNotifierMailer.sample_email(user).deliver
-    end
+        UserNotifierMailer.sample_email(user).deliver
+      end
       redirect_to posts_path
     else
       flash[:alert] = "Your new post couldn't be created!  Please check the form."
@@ -27,11 +27,9 @@ class PostsController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
-
   end
 
   def update
@@ -64,7 +62,7 @@ class PostsController < ApplicationController
     unless current_user == @post.user
       flash[:alert] = "That post doesn't belong to you!"
       redirect_to posts_path
-    end
   end
+end
 
 end
