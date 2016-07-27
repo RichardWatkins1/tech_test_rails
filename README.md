@@ -9,7 +9,7 @@ Tech test Rails
 
 ## Installation
 
-- clone repository git clone https://github.com/RichardWatkins1/tech_test_rails_emails.git
+- clone repository git clone https://github.com/RichardWatkins1/tech_test_rails.git
 - run bundle to install dependencies
 - run bin/rails db:create to create databases
 - run bin/rails db:migrate to set up migrations in development environment
