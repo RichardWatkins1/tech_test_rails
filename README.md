@@ -13,10 +13,10 @@ Tech test Rails
 - run bundle to install dependencies
 - run bin/rails db:create to create databases
 - run bin/rails db:migrate to set up migrations in development environment
-- run bin/rails db:migrate RAILS_ENV=test to set up migrations in test environment
+- run bin/rails db:migrate RAILS_ENV=test to set up migrations in test environment if previous migration didn't set up both development and test.
 - run bin/rails s to start the server
 - visit http://localhost:3000/ to view website
-- If using gmail for emails 2 step-verification must be turned off
+- If using gmail for emails 2 step-verification must be turned off in order to receive emails.
 
 ## Testing
 
